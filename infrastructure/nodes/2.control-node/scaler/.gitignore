@@ -1,0 +1,12 @@
+# Env
+.env
+
+# Binaries
+bin/
+scaler
+
+# Test binaries
+*.test
+
+# Output of the go coverage tool
+*.out

@@ -1,0 +1,12 @@
+# Env
+.env
+
+# Binaries
+bin/
+server-manager-api
+
+# Test binaries
+*.test
+
+# Output of the go coverage tool
+*.out

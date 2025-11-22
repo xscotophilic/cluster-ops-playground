@@ -1,0 +1,25 @@
+services:
+  async-fibonacci-db-migrate:
+    build:
+      context: ../docker/server
+      dockerfile: Dockerfile
+    command: ["npm", "run", "migrate:up"]
+    restart: "no"
+    env_file:
+      - ./.env
+
+  async-fibonacci-server:
+    build:
+      context: ../docker/server
+      dockerfile: Dockerfile
+    ports:
+      - '5000:5000'
+    env_file:
+      - ./.env
+
+  async-fibonacci-worker:
+    build:
+      context: ../docker/worker
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env

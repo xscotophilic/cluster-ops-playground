@@ -1,0 +1,11 @@
+# SSH keys
+.ssh/
+
+# Environment variables
+.env*
+!.env.example
+
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
